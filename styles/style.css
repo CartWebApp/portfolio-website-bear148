@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Golos+Text:wght@400..900&display=swap');
+
+:root {
+    --dark-blue: #1E0342;
+    --medium-blue: #0E46A3;
+    --coral-blue: #9AC8CD;
+    --bwhite: #E1F7F5;
+    --orange: #FF9156;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    color: var(--bwhite);
+    font-family: "Golos Text", sans-serif;
+    background-color: var(--dark-blue);
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Geologica", sans-serif;
+}
+
+p {
+    font-family: "Golos Text", sans-serif;
+}
+
+.blog-item a:hover,
+a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(#0E46A3, #1E0342);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: var(--bwhite);
+    text-align: center;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+}
+
+nav {
+    padding: 10px;
+    background-image: linear-gradient(rgba(14, 71, 163, 0.466), rgba(255, 255, 255, 0) 75%);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li a {
+    font-family: "Geologica", sans-serif;
+    text-decoration: none;
+    text-align: center;
+    color: var(--orange);
+    margin: 0;
+    font-size: 1.25rem;
+} 
+
+.intro {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-image: linear-gradient(rgb(14, 71, 163), rgba(255, 255, 255, 0) 100%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro h2 {
+    margin-right: 125px;
+}
+
+.intro p {
+    width: 50%;
+    text-indent: 55px;
+    font-size: 1.1rem;
+}
+
+.rtl-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 10px;
+}
+
+.rtl-card h2 {
+    font-size: 2rem;
+    margin-right: 25px;
+    width: 200px;
+    text-align: left;
+}
+
+.rtl-card img {
+    width: 800px;
+    height: 400px;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--medium-blue);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+footer * {
+    margin: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1500px;
+}
+
+main::after {
+    content: '';
+
+}
+
+.blogposts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 1500px;
+}
+
+.blog-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 500px;
+}
+
+.blog-item a {
+    color: var(--orange);
+    text-decoration: none;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 100%;
+    background-color: var(--medium-blue);
+}
+
+.post-secondary,
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1500px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 70%;
+    align-self: center;
+}
+
+.date {
+    text-decoration: underline;
+    width: 100%;
+}
+
+.blog-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1500px;
+}
+
+.blog-body img {
+    width: 50%;
+}
+
+.blog-body h3,
+.blog-body h2,
+.blog-body ul,
+.blog-body p {
+    width: 100%;
+}
+
+.project {
+    width: 100%;
+}
+
+.blog-hero {
+    height: 400px;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+
+.container a {
+    color: var(--orange);
+    text-decoration: none;
+    align-self: flex-start;
+}
+
+.container hr {
+    width: 100%;
+    border: 1px solid var(--orange);
+}

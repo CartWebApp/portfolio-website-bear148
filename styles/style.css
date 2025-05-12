@@ -6,12 +6,14 @@
     --dark-blue: #000018;
     --medium-blue: #001941;
     --coral-blue: #9AC8CD;
+    --dcoral-blue:rgb(0, 106, 117);
     --bwhite: #E1F7F5;
     --orange: #FF9156;
     --gray: #616161;
 }
 
 body {
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -33,7 +35,7 @@ p {
 
 .blog-item a:hover,
 a:hover {
-    text-decoration: underline;
+    text-shadow: 3px 3px 30px var(--coral-blue);
 }
 
 .hero {
@@ -80,12 +82,38 @@ nav ul li a {
 .intro {
     padding-top: 25px;
     padding-bottom: 25px;
-    background-color: var(--dark-blue);
+    background-color: var(--dcoral-blue);
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 25px;
+}
+
+.LightWaves {
+    position: relative;
+    top: 100%;
+    animation: lightwaves 2s infinite;
+}
+  
+@keyframes lightwaves {
+    0%,100% { transform: translate(0,0); }
+    25%     { transform: translate(5px,5px); transform: scale(1.05); }
+    50%     { transform: translate(25px, 5px); }
+    75%     { transform: translate(12px,10px); transform: scale(1.05); }
+}
+
+.DarkWaves {
+    position: relative;
+    top: 0;
+    animation: darkwaves 3.8s infinite;
+}
+
+@keyframes darkwaves {
+    0%,100% { transform: translate(0,0); }
+    25%     { transform: translate(25px, 5px); transform: scale(1.05); }
+    50%     { transform: translate(12px,10px); }
+    75%     { transform: translate(5px,5px); }
 }
 
 .intro h2 {
@@ -147,11 +175,6 @@ main {
     align-items: center;
     justify-content: center;
     max-width: 1500px;
-}
-
-main::after {
-    content: '';
-
 }
 
 .blogposts {
@@ -265,6 +288,14 @@ main::after {
     width: 20%;
     top: 13%;
     animation: fish 25s linear infinite;
+    opacity: 0.6;
+}
+
+#anglerfish {
+    position: absolute;
+    width: 10%;
+    top: 38%;
+    animation: shark 20s linear infinite;
     opacity: 0.6;
 }
 

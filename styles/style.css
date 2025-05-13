@@ -6,7 +6,7 @@
     --dark-blue: #000018;
     --medium-blue: #001941;
     --coral-blue: #9AC8CD;
-    --dcoral-blue:rgb(0, 106, 117);
+    --dcoral-blue:rgb(0, 37, 117);
     --bwhite: #E1F7F5;
     --orange: #FF9156;
     --gray: #616161;
@@ -90,32 +90,105 @@ nav ul li a {
     margin-bottom: 25px;
 }
 
-.LightWaves {
+.waveAnimation {
+    width: 100%;
+    height: 25px;
+    overflow: hidden;
     position: relative;
-    top: 100%;
-    animation: lightwaves 2s infinite;
-}
-  
-@keyframes lightwaves {
-    0%,100% { transform: translate(0,0); }
-    25%     { transform: translate(5px,5px); transform: scale(1.05); }
-    50%     { transform: translate(25px, 5px); }
-    75%     { transform: translate(12px,10px); transform: scale(1.05); }
 }
 
-.DarkWaves {
-    position: relative;
-    top: 0;
-    animation: darkwaves 3.8s infinite;
+.waveAnimation svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    bottom: 0; /* or top: 0 depending on wave position */
+}
+.w1 {
+    stroke: none;
+    fill: var(--dcoral-blue);
+    animation: move1 5s ease-in-out infinite;
 }
 
-@keyframes darkwaves {
-    0%,100% { transform: translate(0,0); }
-    25%     { transform: translate(25px, 5px); transform: scale(1.05); }
-    50%     { transform: translate(12px,10px); }
-    75%     { transform: translate(5px,5px); }
+.w2 {
+    stroke: none;
+    fill: var(--dcoral-blue);
+    transform: translate3d(0, 0, 0);
+    animation: move2 4s ease-in-out infinite;
 }
 
+.w3 {
+    stroke: none;
+    fill: var(--dcoral-blue);
+    transform: translate3d(0, 0, 0);
+    animation: move3 6s ease-in-out infinite;
+}
+
+@keyframes move1 {
+    0% {
+        transform: translateX(-500px) scaleX(2.5);
+    }
+
+    25% {
+        transform: translateX(-100) scaleX(2.5);
+    }
+
+    50% {
+        transform: translateX(0) scaleX(2.5);
+    }
+
+    75% {
+        transform: translateX(-100) scaleX(2.5);
+    }
+
+    100% {
+        transform: translateX(-500px) scaleX(2.5);
+    }
+}
+
+@keyframes move2 {
+    0% {
+        transform: translateX(-600px) scaleX(3);
+    }
+
+    25% {
+        transform: translateX(-100) scaleX(2.5);
+    }
+
+    50% {
+        transform: translateX(0) scaleX(3);
+    }
+
+    75% {
+        transform: translateX(-100) scaleX(2.5);
+    }
+
+    100% {
+        transform: translateX(-600px) scaleX(3);
+    }
+}
+
+@keyframes move3 {
+    0% {
+        transform: translateX(-800px) scaleX(3);
+    }
+
+    25% {
+        transform: translateX(-100) scaleX(2.5);
+    }
+
+    50% {
+        transform: translateX(0) scaleX(3);
+    }
+
+    75% {
+        transform: translateX(-100) scaleX(2.5);
+    }
+
+    100% {
+        transform: translateX(-800px) scaleX(3);
+    }
+}
 .intro h2 {
     margin-right: 125px;
 }
@@ -127,7 +200,7 @@ nav ul li a {
 }
 
 .rtl-card {
-    background-color: var(--medium-blue);
+    background-color: var(--dcoral-blue);
     margin-bottom: 25px;
     display: flex;
     flex-direction: row;
@@ -151,7 +224,7 @@ nav ul li a {
 
 footer {
     width: 100%;
-    background-color: var(--medium-blue);
+    background-color: var(--dcoral-blue);
     padding-top: 15px;
     padding-bottom: 15px;
     display: flex;
@@ -317,4 +390,58 @@ main {
     to {
         left: 99%;
     }
+}
+
+#bubble-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* So it doesn't interfere with clicks */
+    overflow: hidden;
+    z-index: -1; /* Keeps it in the background */
+}
+
+.bubble {
+    position: absolute;
+    bottom: 0;
+    width: 256px;
+    height: 256px;
+    opacity: 0.4;
+    animation: rise 10s forwards;
+}
+
+@keyframes rise {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.4;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1.2);
+        opacity: 0;
+    }
+}
+
+.project-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin-bottom: 25px;
+}
+
+.project-item img {
+    width: 50%;
+    margin-right: 25px;
+}
+
+.project-desc {
+    width: 30%;
+}
+
+.project-desc a {
+    color: var(--coral-blue);
+    text-decoration: none;
 }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Home</title>
     <link rel="stylesheet" href="/styles/style.css">
+    <script src="/scripts/script.js" defer></script>
 </head>
 <body>
     <header>
@@ -19,6 +20,9 @@
             </ul>
         </nav>
     </header>
+    <div id="bubble-container">
+
+    </div>
     <main>
         <section class="hero">
             <img id="fish" src="/assets/fish.png" alt="Fish">
@@ -26,42 +30,23 @@
             <!-- <img id="anglerfish" src="/assets/angler.png" alt="Angler Fish"> -->
             <h1>Michael Srenaski's Portfolio</h1>
         </section>
+        <div class="waveAnimation">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+                <path
+                class="w1 waveTop"
+                d="M-8.74,71.55 C289.78,255.11 349.60,4.47 505.36,34.05 L500.00,150.00 L0.00,150.00 Z"
+                />
+                <path
+                class="w2 waveMiddle"
+                d="M-23.42,125.83 C187.63,45.89 299.38,57.73 526.80,123.86 L500.00,150.00 L0.00,150.00 Z"
+                />
+                <path
+                class="w3 waveBottom"
+                d="M-23.42,125.83 C172.96,-152.44 217.55,183.06 504.22,55.77 L500.00,150.00 L0.00,150.00 Z"
+                />
+            </svg>
+        </div>
         <section class="intro">
-            <g id="DarkWaves" class="DarkWaves">
-                <g>
-                    <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="400.0005" y1="602" x2="400.0005" y2="202.3545">
-                        <stop  offset="0" style="stop-color:#0000FF"/>
-                        <stop  offset="0.1789" style="stop-color:#0020EC"/>
-                        <stop  offset="0.4149" style="stop-color:#0043D7"/>
-                        <stop  offset="0.6374" style="stop-color:#005CC8"/>
-                        <stop  offset="0.8386" style="stop-color:#006CBF"/>
-                        <stop  offset="1" style="stop-color:#0071BC"/>
-                    </linearGradient>
-                    <path class="st2" d="M761.8,202.4c-24.7,0-36.7,7.2-49.5,14.7c-13.2,7.8-26.8,15.9-53.8,15.9c-27,0-40.6-8.1-53.8-15.9
-                        c-12.8-7.6-24.9-14.7-49.6-14.7c-24.7,0-36.8,7.2-49.6,14.7c-13.2,7.8-26.8,15.9-53.8,15.9c-27,0-40.7-8.1-53.8-15.9
-                        c-12.8-7.6-24.9-14.7-49.6-14.7c-24.7,0-36.8,7.2-49.6,14.7c-13.2,7.8-26.8,15.9-53.8,15.9c-27,0-40.7-8.1-53.8-15.9
-                        c-12.8-7.6-24.9-14.7-49.6-14.7c-24.7,0-36.8,7.2-49.6,14.7C78.7,224.9,65,232.9,38,232.9c-27,0-40.4-8.1-53.6-15.9
-                        c-12.1-7.1-24.3-13.9-45.4-14.6V602h922V232.9c-22.6-0.8-37.2-8.4-49.7-15.8C798.5,209.5,786.5,202.4,761.8,202.4z"/>
-                </g>
-            </g>
-            <g id="LightWaves" class="LightWaves">
-                <g>
-                    <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="400.0005" y1="600" x2="400.0005" y2="214.3545">
-                        <stop  offset="0" style="stop-color:#0000FF"/>
-                        <stop  offset="0.1643" style="stop-color:#0B2CF7"/>
-                        <stop  offset="0.3574" style="stop-color:#1559F0"/>
-                        <stop  offset="0.5431" style="stop-color:#1E7DEA"/>
-                        <stop  offset="0.7168" style="stop-color:#2496E6"/>
-                        <stop  offset="0.874" style="stop-color:#28A6E3"/>
-                        <stop  offset="1" style="stop-color:#29ABE2"/>
-                    </linearGradient>
-                    <path class="st3" d="M750.9,229.8c-14.8-7.9-28.7-15.4-57.2-15.4c-28.5,0-42.4,7.5-57.2,15.4c-15.2,8.2-30.9,16.6-62.1,16.6
-                        s-46.9-8.4-62.1-16.6c-14.8-7.9-28.7-15.4-57.2-15.4c-28.5,0-42.4,7.5-57.2,15.4c-15.2,8.2-30.9,16.6-62.1,16.6
-                        c-31.2,0-46.9-8.4-62.1-16.6c-14.8-7.9-28.7-15.4-57.2-15.4c-28.5,0-42.4,7.5-57.2,15.4c-15.2,8.2-30.9,16.6-62.1,16.6
-                        c-31.2,0-46.9-8.4-62.1-16.6c-14.8-7.9-28.9-15.4-57.3-15.4c-16.9,0-28.8,2.6-38.8,6.4V600h922V237c-12,5.3-26,9.4-47.8,9.4
-                        C782.1,246.4,766.1,237.9,750.9,229.8z"/>
-                </g>
-            </g>
             <h2>Hi, I'm Michael Srenaski!</h2>
             <p>I’m a 17-year-old high school student at Clovis West in Fresno, California. Over the past few years, I’ve developed a real passion for coding and web development. I love solving problems, building cool things from scratch, and constantly pushing myself to learn something new. This website is a glimpse into that journey containing a collection of some of the projects I have created, each one representing a step in my growth as a developer. Whether it’s a game, a tool, or a full-on website, I have had a blast bringing each project to life. I am excited to share my work with you, and I hope you enjoy exploring it as much as I enjoyed building it!</p>
         </section>

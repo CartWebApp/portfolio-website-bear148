@@ -1,4 +1,18 @@
 const bubbleContainer = document.getElementById("bubble-container");
+let container = document.getElementById('container');
+let windowHeight = window.innerHeight;
+let windowWidth = window.innerWidth;
+let scrollArea = 1000 - windowHeight;
+let fish1 = document.getElementById('clownfish');
+let fish2 = document.getElementById('bluetang');
+
+// window.addEventListener('scroll', function() {
+//   var scrollTop = window.pageYOffset || window.scrollTop;
+//   var scrollPercent = scrollTop/scrollArea || 0;
+
+//   fish1.style.left = scrollPercent*window.innerWidth + 'px';
+//   fish2.style.left = 800 - scrollPercent*window.innerWidth*0.6 + 'px';
+// });
 
 function spawnBubble() {
     const bubble = document.createElement("img");

@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --blue: #003eab;
+}
+
+h1, h2 {
+    color: var(--blue);
+    text-transform: capitalize;
+}
+
+html {
+    display: flex;
+    justify-content: center;
+
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+#resume-body {
+    font-family: "Hanken Grotesk", sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    max-width: 1250px;
+}
+
+hr {
+    display: block;
+    border-bottom: 2px solid var(--blue);
+    width: 100%;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.column {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 30%;
+    margin-top: 25px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.column section:first-child {
+    margin: 0;
+}
+
+.column section:first-child h2 {
+    margin-top: 0;
+}
+
+ul {
+    margin: 0;
+}
+
+.main-details h1 {
+    font-size: 2.65rem;
+    margin-bottom: 15px;
+}
+
+.main-details ul li:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.main-details > p {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.main-details > p > img {
+    margin-right: 15px;
+}
+
+#ghlogo {
+    height: 32px;
+}
+
+hr:last-of-type {
+    margin-top: 25px;
+}

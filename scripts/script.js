@@ -1,4 +1,7 @@
 const bubbleContainer = document.getElementById("bubble-container");
+const toggleBtn = document.getElementById('sidebar-toggle');
+const sidebar = document.getElementById('sidebar');
+
 let container = document.getElementById('container');
 let windowHeight = window.innerHeight;
 let windowWidth = window.innerWidth;
@@ -37,6 +40,10 @@ function spawnBubble() {
         bubble.remove();
     });
 }
+
+toggleBtn.addEventListener('click', () => {
+  sidebar.classList.toggle('active');
+});
 
 // Spawn a bubble every 300ms
 setInterval(spawnBubble, 2500);

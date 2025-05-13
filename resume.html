@@ -4,37 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
+    <link rel="stylesheet" href="/styles/resume.css">
+    <script src="/scripts/script.js" defer></script>
 </head>
-<body id="header-body">
+<body id="resume-body">
     <header>
         <img src="/assets/rlogo.png" alt="Logo">
-        <h1>Michael Srenaski</h1>
-        <p>+1 (559)-907-9597</p>
-        <p>michaelsrenaski@gmail.com</p>
-        <p>20025 Genteel Dr. Friant, CA 93626</p>
+        <section class="main-details">
+            <h1>MICHAEL SRENASKI</h1>
+            <ul>
+                <li>+1 (559)-907-9597</li>
+                <li>michaelsrenaski@gmail.com</li>
+                <li>20025 Genteel Dr. Friant, CA 93626</li>
+            </ul>
+            <p>
+                <img src="/assets/github.png" id="ghlogo">
+                <strong>github.com/bear148</strong>
+            </p>
+        </section>
     </header>
-    <section>
-        <p>A student with experience in front-end web development with HTML and CSS, and further development skills using programming languages such as JavaScript, PowerShell, Python, and Bash.</p>
-    </section>
-    <section>
-        <h2>Education</h2>
-        <p>High School Education Clovis West High School, Class of 2026 Center for Advanced Research and Technology (CART) Secondary Education Kastner Intermediate School Primary Education Liberty Elementary Bud Rank Elementary</p>
-    </section>
-    <section>
-        <h2>Educational Experience</h2>
-        <p>AP Computer Science Principles AP US History Honors Math 2 & 3 4.2 GPA 1280 11th Grade PSAT Web Development at CART Robotics GATE</p>
-    </section>
-    <section>
-        <h2>Skills</h2>
-        <p>Programming HTML CSS JavaScript PowerShell Design Figma Adobe Premier Pro Adobe Photoshop</p>
-    </section>
-    <section>
-        <h2>Projects</h2>
-        <p>MD5 Hash Reversal Tool January 2025 Reverse engineering project that took words encrypted using MD5 and returned them to their original value. Hand-written automation tools took these values and automatically inputted them into a puzzle game. Functional Website for TRION Supercars October 2024 - December 2024 Full user flow allowing a customer to customize their own TRION supercar. Lead Developer for the duration of the project. Presented the final product during a showcase event at CART.</p>
-    </section>
-    <section>
-        <h2>Volunteer Work</h2>
-        <p>125 Hours Coaching Sports Coaching younger kids in a Youth Bowling League. Leadership skills Communication Problem Solving</p>
-    </section>
+    <hr>
+    <div class="main-content">
+        <div class="column">
+            <section class="summary">
+                <p>A student with experience in front-end web development with HTML and CSS, and further development skills using programming languages such as JavaScript, PowerShell, Python, and Bash.</p>
+            </section>
+            <section>
+                <h2>EDUCATION</h2>
+                <p><strong>High School Education</strong></p>
+                <p>Clovis West High School</p>
+                <p>Class of 2026 Center for Advanced Research and Technology (CART)</p>
+                <br>
+                <p><strong>Secondary Education</strong></p>
+                <p>Kastner Intermediate School</p>
+                <br>
+                <p><strong>Primary Education</strong></p>
+                <p>Liberty Elementary Bud Rank Elementary</p>
+            </section>
+            <section>
+                <h2>EDUCATIONAL EXPERIENCE</h2>
+                <ul>
+                    <li>AP Computer Science Principles</li>
+                    <li>AP US History</li>
+                    <li>Honors Math 2 & 3</li>
+                    <li>4.2 GPA</li>
+                    <li>1280 11th Grade PSAT</li>
+                    <li>Web Development at CART</li>
+                    <li>Robotics</li>
+                    <li>GATE</li>
+                </ul>
+            </section>
+        </div>
+        <div class="column">
+            <section>
+                <h2>PROJECTS</h2>
+                <p><strong>MD5 Hash Reversal Tool</strong></p>
+                <p>January 2025</p>
+                <ul>
+                    <li>Reverse engineering project that took words encrypted using MD5 and returned them to their original value.</li>
+                    <li>Hand-written automation tools took these values and automatically inputted them into a puzzle game.</li>
+                </ul>
+                <p><strong>Functional Website for TRION Supercars</strong></p>
+                <p>October 2024 - December 2024</p>
+                <ul>
+                    <li>Full user flow allowing a customer to customize their own TRION supercar.</li>
+                    <li>Lead Developer for the duration of the project.</li>
+                    <li>Presented the final product during a showcase event at CART.</li>
+                </ul>
+            </section>
+            <section>
+                <h2>SKILLS</h2>
+                <p><strong>Programming</strong></p>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>PowerShell</li>
+                </ul>
+                <p><strong>Design</strong></p>
+                <ul>
+                    <li>Figma</li>
+                    <li>Adobe Premier Pro</li>
+                    <li>Adobe Photoshop</li>
+                </ul>
+            </section>
+            <section>
+                <h2>VOLUNTEER WORK</h2>
+                <p><strong>125 Hours Coaching Sports</strong></p>
+                <ul>
+                    <li>Coaching younger kids in a Youth Bowling League.</li>
+                    <ul>
+                        <li>Leadership skills</li>
+                        <li>Communication</li>
+                        <li>Problem Solving</li>
+                    </ul>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <hr>
+    <a href="/index.html">Back</a>
 </body>
 </html>

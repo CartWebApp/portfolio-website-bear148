@@ -15,6 +15,13 @@
     --dcoral-blue3: rgb(0, 15, 46);
 }
 
+html {
+    background-image: linear-gradient(to top right, var(--dark-black), var(--medium-blue));
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
 body {
     overflow-x: hidden;
     display: flex;
@@ -23,7 +30,6 @@ body {
     margin: 0;
     color: var(--bwhite);
     font-family: "Golos Text", sans-serif;
-    background-image: linear-gradient(to top right, var(--dark-black), var(--medium-blue));
 }
 
 h1,
@@ -68,9 +74,22 @@ nav {
 
 nav ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
     padding: 0;
     list-style: none;
+}
+
+nav ul li:first-child {
+    margin-left: 25px;
+}
+
+nav ul li:last-child {
+    margin-right: 25px;
+}
+
+nav ul li {
+    height: fit-content;
 }
 
 nav ul li a {
@@ -83,6 +102,7 @@ nav ul li a {
 } 
 
 .intro {
+    margin-top: -2px;
     padding-top: 25px;
     padding-bottom: 25px;
     background-color: var(--dcoral-blue);
@@ -96,7 +116,7 @@ nav ul li a {
 
 .waveAnimation {
     width: 100%;
-    height: 75px;
+    height: 70px;
     overflow: hidden;
     position: relative;
 }
@@ -107,19 +127,6 @@ nav ul li a {
     display: block;
     position: absolute;
     bottom: 0; /* or top: 0 depending on wave position */
-}
-
-.w1 {
-    stroke: none;
-    fill: var(--dcoral-blue3);
-    animation: move1 5s ease-in-out infinite;
-}
-
-.w2 {
-    stroke: none;
-    fill: var(--dcoral-blue2);
-    transform: translate3d(0, 0, 0);
-    animation: move2 4s ease-in-out infinite;
 }
 
 .w3 {
@@ -275,7 +282,10 @@ main {
 }
 
 .blog-item a {
-    color: var(--orange);
+    background-color: var(--coral-blue);
+    color: var(--dark-black);
+    padding: 10px;
+    cursor: pointer;
     text-decoration: none;
 }
 
@@ -293,6 +303,15 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 1500px;
+}
+
+.about-container {
+    align-self: center;
+}
+
+.section.projects > h2 {
+    text-align: center;
     max-width: 1500px;
 }
 
@@ -349,14 +368,14 @@ main {
 }
 
 .container a {
-    color: var(--orange);
+    color: var(--coral-blue);
     text-decoration: none;
     align-self: flex-start;
 }
 
 .container hr {
     width: 100%;
-    border: 1px solid var(--orange);
+    border: 1px solid var(--medium-blue);
 }
 
 #shark {
@@ -586,6 +605,75 @@ main {
     margin-top: 0;
 }
 
-#header-body {
+.rtl-card * {
+    color: var(--coral-blue);
+    text-decoration: none;
+}
 
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* hidden by default */
+    width: 250px;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: var(--medium-blue);
+    transition: left 0.3s ease;
+    padding-top: 60px;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    position: absolute;
+    left: 0;
+}
+
+.sidebar a {
+    color: var(--coral-blue);
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin-left: 15px;
+}
+
+.sidebar a:not(:last-child) {
+    margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+    .intro {
+        flex-flow: column nowrap;
+    }
+
+    .container > form > textarea {
+        resize: none;
+        width: 370px;
+        height: 300px;
+        padding: 10px;
+    }
+
+    #clownfish {
+        position: absolute;
+        width: 7%;
+        top: 2300px;
+        right: 50px;
+    }
+    
+    #bluetang {
+        position: absolute;
+        width: 7%;
+        top: 2600px;
+        left: 50px;
+    }
+
+    .intro h2 {
+        text-align: center;
+    }
+    
+    .intro p {
+        width: 99%;
+    }
 }

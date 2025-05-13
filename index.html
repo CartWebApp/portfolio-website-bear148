@@ -11,15 +11,19 @@
     <header>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="about.html">About Me</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li id="sidebar-toggle"><</li>
             </ul>
         </nav>
     </header>
+    <div id="sidebar" class="sidebar">
+        <a href="/index.html">Home</a>
+        <a href="/portfolio.html">Portfolio</a>
+        <a href="/about.html">About Me</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/resume.html">Resume</a>
+        <a href="/blog.html">Blog</a>
+    </div>
     <div id="bubble-container">
 
     </div>
@@ -54,20 +58,19 @@
             <img id="bluetang" src="/assets/bluetang.png" alt="Blue Tang Fish"> 
             <img id="clownfish" src="/assets/clownfish.png" alt="Clownfish"> 
             <section class="projects rtl-card">
-                <h2>Projects</h2>
+                <h2><a href="/portfolio.html">Projects</a></h2>
                 <img src="assets/projects.png" alt="Projects">
             </section>
             <section class="blogs rtl-card">
-                <h2>Blogs</h2>
+                <h2><a href="/blog.html">Blogs</a></h2>
                 <img src="assets/blogs.png" alt="Blogs">
             </section>
-            <section class="contact rtl-card">
-                <h2>Contact</h2>
-                <img src="assets/contact.png" alt="Contact">
-            </section>
             <section class="resume rtl-card">
-                <h2>Resume</h2>
-                <img src="assets/resume.png" alt="Resume">
+                <h2><a href="/resume.html">Resume</a></h2>
+                <img src="/assets/resume.png" alt="Resume">
+            </section>
+            <section class="contact rtl-card">
+                <h2><a href="/contact.html">Contact</a></h2>
             </section>
         </div>
     </main>

@@ -25,4 +25,4 @@ function spawnBubble() {
 }
 
 // Spawn a bubble every 300ms
-setInterval(spawnBubble, 5000);
+setInterval(spawnBubble, 2500);

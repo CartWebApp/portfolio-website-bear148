@@ -328,6 +328,7 @@ main {
     width: 100%;
 }
 
+.contact-hero,
 .aboutme-hero,
 .blog-hero {
     height: 400px;
@@ -444,4 +445,83 @@ main {
 .project-desc a {
     color: var(--coral-blue);
     text-decoration: none;
+}
+
+.rockbed {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.seaweed {
+    width: 10%;
+    margin-bottom: -5px;
+}
+
+.clownfish {
+    position: absolute;
+    width: 7%;
+    top: 1700px;
+    right: 50px;
+}
+
+.bluetang {
+    position: absolute;
+    width: 7%;
+    top: 2300px;
+    left: 50px;
+}
+
+.container > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.form-grop *,
+.container > form > textarea {
+    border: none;
+    color: var(--bwhite);
+    background-color: var(--medium-blue);
+}
+
+.container > form > textarea {
+    resize: none;
+    width: 600px;
+    height: 300px;
+    padding: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.form-group > input {
+    width: 35%;
+    color: var(--bwhite);
+    background-color: var(--medium-blue);
+    border: none;
+    padding: 10px;
+}
+
+.container > form > button {
+    background-color: var(--coral-blue);
+    color: var(--dark-black);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    align-self: flex-end;
+}
+
+.form-group > input::placeholder,
+.container *::placeholder {
+    font-family: "Golos Text", sans-serif;
 }

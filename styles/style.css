@@ -20,6 +20,7 @@ html {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
+    animation: 1s fadeInUp;
 }
 
 body {
@@ -220,7 +221,7 @@ nav ul li a {
     padding: 20px;
     border-radius: 5px;
     width: 50%;
-    border: 3px dashed var(--medium-blue);
+    border: 3px dashed var(--dcoral-blue);
 }
 
 .rtl-card h2 {

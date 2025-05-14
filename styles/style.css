@@ -44,6 +44,7 @@ p {
     font-family: "Golos Text", sans-serif;
 }
 
+.link,
 .blog-item a:hover,
 a:hover {
     text-shadow: 3px 3px 30px var(--coral-blue);
@@ -351,10 +352,6 @@ main {
     width: 100%;
 }
 
-.projects {
-    max-width: 1000px;
-}
-
 .project {
     width: 100%;
 }
@@ -462,6 +459,58 @@ main {
     justify-content: space-between;
     max-width: 1500px;
     margin-bottom: 25px;
+}
+
+.carousel {
+    position: relative;
+    max-width: 1250px;
+    margin: auto;
+    overflow: hidden;
+    border: 3px dashed var(--dcoral-blue);
+    border-radius: 10px;
+    margin-bottom: 55px;
+}
+
+.carousel-image {
+    width: 1200px;
+    height: 600px;
+    display: block;
+}
+
+.carousel-description {
+    padding: 10px;
+    background: var(--dcoral-blue);
+    color: var(--bwhite);
+    text-align: center;
+    font-size: 1rem;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-button {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.carousel-button:first-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.carousel-button:last-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .project-item img {
@@ -614,7 +663,7 @@ main {
 .sidebar {
     position: fixed;
     top: 0;
-    left: -250px; /* hidden by default */
+    right: -250px; /* hidden by default */
     width: 250px;
     height: 100%;
     overflow-x: hidden;
@@ -630,7 +679,7 @@ main {
 
 .sidebar.active {
     position: absolute;
-    left: 0;
+    right: 0;
 }
 
 .sidebar a {
@@ -642,6 +691,12 @@ main {
 
 .sidebar a:not(:last-child) {
     margin-bottom: 25px;
+}
+
+#sidebar-toggle {
+    position: absolute;
+    right: 0;
+    z-index: 100000;
 }
 
 @media only screen and (max-width: 768px) {
@@ -677,4 +732,12 @@ main {
     .intro p {
         width: 99%;
     }
+}
+
+.link {
+    color: var(--coral-blue);
+}
+
+::selection {
+    background-color: #FF9156;
 }
